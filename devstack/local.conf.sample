@@ -1,0 +1,114 @@
+# local.conf file for bare metal deployment using iLO drivers.
+#
+# IMPORTANT: All the settings marked with <TBF> (To Be Filled)
+# are system dependent and are to be filled before running
+# stack.sh.  After filling relevant details, copy this file
+# to <devstack directory>/local.conf and then run stack.sh.
+
+[[local|localrc]]
+
+# Credentials
+ADMIN_PASSWORD=password
+DATABASE_PASSWORD=password
+RABBIT_PASSWORD=password
+SERVICE_PASSWORD=password
+SERVICE_TOKEN=password
+SWIFT_HASH=password
+SWIFT_TEMPURL_KEY=password
+
+# Services to disable/enable.
+disable_service n-net n-novnc n-cauth q-l3
+disable_service horizon
+disable_service heat h-api h-api-cfn h-api-cw heat
+disable_service cinder c-sch c-api c-vol
+
+enable_service q-svc q-agt q-dhcp
+enable_service q-meta neutron
+enable_service s-proxy s-object s-container s-account
+enable_service ironic ir-api ir-cond
+enable_service tempest
+
+# General settings.
+GIT_BASE=http://git.openstack.org
+RECLONE=yes
+
+# Neutron settings.
+IP_VERSION=4
+PHYSICAL_NETWORK=baremetal_network
+PROVIDER_NETWORK_TYPE=flat
+Q_USE_PROVIDER_NETWORKING=True
+
+# The n/w interface to which the bare metal network is connected.
+# For example,
+# PUBLIC_INTERFACE=eth1
+PUBLIC_INTERFACE=<TBF> # Interface to which th
+
+# The IP of the cloud controller on the bare metal flat network.
+# For example,
+# HOST_IP=192.168.1.2
+HOST_IP=<TBF>
+
+# The bare metal flat network in CIDR notation.
+# For example,
+# FIXED_RANGE=192.168.1.0/24
+FIXED_RANGE=<TBF>
+
+# The gateway on the bare metal network.
+# For example,
+# NETWORK_GATEWAY=192.168.1.1
+NETWORK_GATEWAY=<TBF>
+
+# The allocation pool on the bare metal network available for the
+# Neutron DHCP of this cloud controller.
+# For example,
+# ALLOCATION_POOL=start=192.168.1.100,end=192.168.1.110
+
+# The OVS bridge on which PUBLIC_INTERFACE is to be connected.
+# For example,
+# OVS_PHYSICAL_BRIDGE=br-eth1
+OVS_PHYSICAL_BRIDGE=<TBF>
+
+# Swift related options
+SWIFT_ENABLE_TEMPURLS="True"
+
+# Ironic related options
+VIRT_DRIVER=ironic
+IRONIC_HW_NODE_CPU=2
+IRONIC_HW_NODE_RAM=16384
+IRONIC_HW_NODE_DISK=99
+IRONIC_BAREMETAL_BASIC_OPS=True
+IRONIC_ENABLED_DRIVERS=fake,iscsi_ilo,agent_ilo,pxe_ilo
+IRONIC_IPA_RAMDISK_DISTRO="fedora"
+IRONIC_DEPLOY_ISO_REQUIRED="true"
+IRONIC_DEPLOY_DRIVER_ISCSI_WITH_IPA="true"
+IRONIC_CONFIGURE_GLANCE_WITH_SWIFT="true"
+
+
+# Ironic iLO driver options
+IRONIC_USER_IMAGE_PREFERRED_DISTRO=ubuntu
+
+# Choose the preferred driver to use while enrolling the node.
+# For example,
+# IRONIC_DEPLOY_DRIVER=iscsi_ilo
+IRONIC_DEPLOY_DRIVER=<TBF>
+
+# The bare metal to use for deployment in the below format
+# "<ilo address> <mac address> <ilo username> <ilo password> <root device hint>"
+# For example,
+# IRONIC_ILO_HWINFO="baremetal2 08:00:27:B9:04:92 abcd qwe"
+IRONIC_ILO_HWINFO=<TBF>
+
+# iLO driver plugin
+LIBS_FROM_GIT="proliantutils"
+enable_plugin ironic_ilo_driver https://github.com/hpproliant/devstack-gate
+
+[[post-config|$IRONIC_CONF_FILE]]
+
+[conductor]
+clean_nodes=false
+
+[keystone_authtoken]
+auth_version=2
+
+[pxe]
+pxe_append_params="console=ttyS1"
