@@ -186,6 +186,29 @@
     },
     {
       "key": {
+        "uuid": "7ac7a964_85a0d791",
+        "filename": "devstack/plugin.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 1006803
+      },
+      "writtenOn": "2015-11-20T11:11:08Z",
+      "side": 1,
+      "message": "Will it take care of deploy ramdisk distro? Probably we may need a check for that.",
+      "range": {
+        "startLine": 257,
+        "startChar": 14,
+        "endLine": 257,
+        "endChar": 25
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ac7a964_529f6752",
         "filename": "devstack/settings",
         "patchSetId": 7
