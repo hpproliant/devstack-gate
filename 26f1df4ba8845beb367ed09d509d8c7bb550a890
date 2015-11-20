@@ -46,6 +46,30 @@
       "revId": "26f1df4ba8845beb367ed09d509d8c7bb550a890",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac7a964_a89f6a5e",
+        "filename": "gate.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1006803
+      },
+      "writtenOn": "2015-11-20T15:51:26Z",
+      "side": 1,
+      "message": "We can take this for enhancement as well.\n\nLogic could be simplified...\nInstead of determining the latest patch set. The input file cam contain full line of cherrypicks in the required order of patching. In this script we can just source that file.\nEx:\n\ncherrypick_files.txt\n\ngit fetch https://review.openstack.org/openstack/ironic refs/changes/75/241575/2 \u0026\u0026 git cherry-pick FETCH_HEAD\n\ngit fetch https://review.openstack.org/openstack/ironic refs/changes/75/241580/2 \u0026\u0026 git cherry-pick FETCH_HEAD\n\n\ncherry_pick_files\u003d\u0027some_path\u0027\nif [[ -s $cherry_pick_files ]]; then\n   cd /opt/stack/ironic \n   .  $cherry_pick_files\n   # restart Ironic Conductor and API service.\nfi\n\nWDYT?",
+      "parentUuid": "7ac7a964_485ed6e7",
+      "range": {
+        "startLine": 169,
+        "startChar": 19,
+        "endLine": 169,
+        "endChar": 24
+      },
+      "revId": "26f1df4ba8845beb367ed09d509d8c7bb550a890",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
