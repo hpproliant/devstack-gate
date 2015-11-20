@@ -22,6 +22,30 @@
       "revId": "26f1df4ba8845beb367ed09d509d8c7bb550a890",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac7a964_485ed6e7",
+        "filename": "gate.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1006196
+      },
+      "writtenOn": "2015-11-20T14:55:38Z",
+      "side": 1,
+      "message": "Can we please add this an enhancement later on because determining latest patch set from a patch is not straightforward.",
+      "parentUuid": "7ac7a964_c5c56f5c",
+      "range": {
+        "startLine": 169,
+        "startChar": 19,
+        "endLine": 169,
+        "endChar": 24
+      },
+      "revId": "26f1df4ba8845beb367ed09d509d8c7bb550a890",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
