@@ -16,6 +16,8 @@
 # HTTPS_PROXY - Proxy settings
 # no_proxy - Proxy settings
 
+source functions.sh
+
 set -e
 set -o pipefail
 
@@ -27,6 +29,7 @@ export SECURE_BOOT=${SECURE_BOOT:-}
 export BOOT_LOADER=${BOOT_LOADER:-elilo}
 export BOOT_LOADER=${LOGDIR:-/opt/stack/logs}
 export IRONIC_IPA_RAMDISK_DISTRO=fedora
+export BRANCH=${ZUUL_BRANCH:-master}
 
 function stop_ilo_gate_process {
     local pid
@@ -213,17 +216,8 @@ EOF
 }
 
 function update_devstack {
-    if [[ -d /opt/stack/devstack ]]; then
-        cd /opt/stack/devstack
-        git fetch origin
-        git checkout -f master
-        git reset --hard origin/master
-    else
-        mkdir -p /opt/stack
-        sudo chown -R ubuntu /opt/stack
-        git clone https://github.com/openstack-dev/devstack /opt/stack/devstack
-        cd /opt/stack/devstack
-    fi
+    cd /opt/stack
+    setup_project openstack-dev/devstack $BRANCH
 
     # Cherry-pick the 3 patches required on top of devstack master
     # Add support for dib based agent ramdisk in lib/ironic
@@ -236,6 +230,22 @@ function update_devstack {
     git fetch https://rameshg87@review.openstack.org/openstack-dev/devstack refs/changes/84/244584/1 && git cherry-pick FETCH_HEAD
 }
 
+function update_projects {
+    local projects
+    projects="openstack/nova openstack/python-novaclient "
+    projects+="openstack/neutron openstack/python-neutronclient "
+    projects+="openstack/swift openstack/python-swiftclient "
+    projects+="openstack/ironic openstack/python-ironicclient "
+    projects+="openstack/keystone openstack/python-keystoneclient "
+    projects+="openstack/glance openstack/python-glanceclient "
+    projects+="openstack/tempest"
+
+    for project in $projects; do
+        cd /opt/stack
+        setup_project $project $BRANCH
+    done
+}
+
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 evalInstructions=$(python $DIR/parsing_n_executing_jenny_data.py "$JENNY_INPUT")
 eval "$evalInstructions"
@@ -245,4 +255,5 @@ sudo rm -rf $WORKSPACE/*
 export LOGDIR=$WORKSPACE
 
 update_devstack
+update_projects
 run_stack
