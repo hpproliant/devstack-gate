@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7ac7a964_e8ffa2ff",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006196
+      },
+      "writtenOn": "2015-11-20T14:09:12Z",
+      "side": 1,
+      "message": "These values are not replaced during the CI run. Rather a modified version of local.conf.sample is put manually.  There is some level of automation to be done, we will make a launchpad project and keep track of TODO items as bugs. Can someone take ownership of this ?",
+      "parentUuid": "7ac7a964_f2ddd315",
+      "range": {
+        "startLine": 3,
+        "startChar": 43,
+        "endLine": 3,
+        "endChar": 46
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ac7a964_856ff791",
         "filename": "devstack/local.conf.sample",
         "patchSetId": 7
@@ -36,6 +60,30 @@
       "writtenOn": "2015-11-20T10:55:42Z",
       "side": 1,
       "message": "you might just a put a comment here saying..\n\n\"In case of manual data fill up before copying this file to the \u003cdevstack\u003e folder, you can have:\nenable_service horizon\n\"",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 15
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac7a964_0805be10",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1006196
+      },
+      "writtenOn": "2015-11-20T14:09:12Z",
+      "side": 1,
+      "message": "I can put a general comment saying \n\n  Enable/disable services as required. The below lines   \n  enables the minimum services required for iLO driver \n  testing.",
+      "parentUuid": "7ac7a964_856ff791",
       "range": {
         "startLine": 21,
         "startChar": 0,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "7ac7a964_280a7a21",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1006196
+      },
+      "writtenOn": "2015-11-20T14:09:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ac7a964_a56cf39d",
+      "range": {
+        "startLine": 22,
+        "startChar": 16,
+        "endLine": 22,
+        "endChar": 20
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ac7a964_65f9fbc7",
         "filename": "devstack/local.conf.sample",
         "patchSetId": 7
@@ -82,6 +154,30 @@
       "writtenOn": "2015-11-20T10:55:42Z",
       "side": 1,
       "message": "nit: the inline comment sentence got truncated.",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 16
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac7a964_480fb630",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1006196
+      },
+      "writtenOn": "2015-11-20T14:09:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ac7a964_65f9fbc7",
       "range": {
         "startLine": 44,
         "startChar": 0,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "7ac7a964_6813925c",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1006196
+      },
+      "writtenOn": "2015-11-20T14:09:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ac7a964_c5172fec",
+      "range": {
+        "startLine": 64,
+        "startChar": 2,
+        "endLine": 64,
+        "endChar": 17
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ac7a964_85e4570e",
         "filename": "devstack/local.conf.sample",
         "patchSetId": 7
@@ -128,6 +248,30 @@
       "writtenOn": "2015-11-20T10:55:42Z",
       "side": 1,
       "message": "nit: \"baremetal2 08:00:27:B9:04:92 abcd qwe\" - can this be rephrased as:\n\"10.10.1.100 08:00:27:B9:04:92 my_ilo_username my_ilo_password\"",
+      "range": {
+        "startLine": 98,
+        "startChar": 21,
+        "endLine": 98,
+        "endChar": 31
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac7a964_8810ee4f",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1006196
+      },
+      "writtenOn": "2015-11-20T14:09:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ac7a964_85e4570e",
       "range": {
         "startLine": 98,
         "startChar": 21,
@@ -163,6 +307,30 @@
     },
     {
       "key": {
+        "uuid": "7ac7a964_e826c2b9",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1006196
+      },
+      "writtenOn": "2015-11-20T14:09:12Z",
+      "side": 1,
+      "message": "All of us have at least one machine with us which we use for testing.  It is not mandatory to provide this argument. If this is not set, enrolling the node will be skipped. I will demark the optional/mandatory ones.",
+      "parentUuid": "7ac7a964_d2c1b72f",
+      "range": {
+        "startLine": 99,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 17
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ac7a964_45ba3fdf",
         "filename": "devstack/local.conf.sample",
         "patchSetId": 7
@@ -174,6 +342,30 @@
       "writtenOn": "2015-11-20T10:55:42Z",
       "side": 1,
       "message": "query: whats the option to fetch it from PyPI?",
+      "range": {
+        "startLine": 102,
+        "startChar": 15,
+        "endLine": 102,
+        "endChar": 28
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac7a964_082cde98",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1006196
+      },
+      "writtenOn": "2015-11-20T14:09:12Z",
+      "side": 1,
+      "message": "Just skip this line. I will add a comment on it.",
+      "parentUuid": "7ac7a964_45ba3fdf",
       "range": {
         "startLine": 102,
         "startChar": 15,
@@ -209,6 +401,30 @@
     },
     {
       "key": {
+        "uuid": "7ac7a964_28219a9f",
+        "filename": "devstack/plugin.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 1006196
+      },
+      "writtenOn": "2015-11-20T14:09:12Z",
+      "side": 1,
+      "message": "Can this be taken it as a bug/enhancement given that today we support only fedora based ramdisk.",
+      "parentUuid": "7ac7a964_85a0d791",
+      "range": {
+        "startLine": 257,
+        "startChar": 14,
+        "endLine": 257,
+        "endChar": 25
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ac7a964_529f6752",
         "filename": "devstack/settings",
         "patchSetId": 7
@@ -220,6 +436,30 @@
       "writtenOn": "2015-11-20T06:16:25Z",
       "side": 1,
       "message": "Is this tested part? As i understand we give the statement \"enable_service\" here to enable the plugin as a new service in openstack. Atleast ironic-inspector does the same thing for raising it as two different services there.",
+      "range": {
+        "startLine": 1,
+        "startChar": 15,
+        "endLine": 1,
+        "endChar": 32
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac7a964_2858ba31",
+        "filename": "devstack/settings",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006196
+      },
+      "writtenOn": "2015-11-20T14:09:12Z",
+      "side": 1,
+      "message": "I referred it. We need this only when our plugin starts a daemon. This is not required. I will remove it.",
+      "parentUuid": "7ac7a964_529f6752",
       "range": {
         "startLine": 1,
         "startChar": 15,
