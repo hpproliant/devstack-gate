@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ac7a964_c5c56f5c",
+        "filename": "gate.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1006803
+      },
+      "writtenOn": "2015-11-20T10:56:09Z",
+      "side": 1,
+      "message": "It would be useful if we could apply the Ironic patches a file, instead of updating the script.",
+      "range": {
+        "startLine": 169,
+        "startChar": 19,
+        "endLine": 169,
+        "endChar": 24
+      },
+      "revId": "26f1df4ba8845beb367ed09d509d8c7bb550a890",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
