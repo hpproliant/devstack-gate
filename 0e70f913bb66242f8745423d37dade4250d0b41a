@@ -25,6 +25,121 @@
     },
     {
       "key": {
+        "uuid": "7ac7a964_856ff791",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1006778
+      },
+      "writtenOn": "2015-11-20T10:55:42Z",
+      "side": 1,
+      "message": "you might just a put a comment here saying..\n\n\"In case of manual data fill up before copying this file to the \u003cdevstack\u003e folder, you can have:\nenable_service horizon\n\"",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 15
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac7a964_a56cf39d",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1006778
+      },
+      "writtenOn": "2015-11-20T10:55:42Z",
+      "side": 1,
+      "message": "nit: \"heat\" is repeated.",
+      "range": {
+        "startLine": 22,
+        "startChar": 16,
+        "endLine": 22,
+        "endChar": 20
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac7a964_65f9fbc7",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1006778
+      },
+      "writtenOn": "2015-11-20T10:55:42Z",
+      "side": 1,
+      "message": "nit: the inline comment sentence got truncated.",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 16
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac7a964_c5172fec",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1006778
+      },
+      "writtenOn": "2015-11-20T10:55:42Z",
+      "side": 1,
+      "message": "ALLOCATION_POOL\u003d\u003cTBF\u003e is missing.",
+      "range": {
+        "startLine": 64,
+        "startChar": 2,
+        "endLine": 64,
+        "endChar": 17
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac7a964_85e4570e",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1006778
+      },
+      "writtenOn": "2015-11-20T10:55:42Z",
+      "side": 1,
+      "message": "nit: \"baremetal2 08:00:27:B9:04:92 abcd qwe\" - can this be rephrased as:\n\"10.10.1.100 08:00:27:B9:04:92 my_ilo_username my_ilo_password\"",
+      "range": {
+        "startLine": 98,
+        "startChar": 21,
+        "endLine": 98,
+        "endChar": 31
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ac7a964_d2c1b72f",
         "filename": "devstack/local.conf.sample",
         "patchSetId": 7
@@ -41,6 +156,29 @@
         "startChar": 0,
         "endLine": 99,
         "endChar": 17
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac7a964_45ba3fdf",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1006778
+      },
+      "writtenOn": "2015-11-20T10:55:42Z",
+      "side": 1,
+      "message": "query: whats the option to fetch it from PyPI?",
+      "range": {
+        "startLine": 102,
+        "startChar": 15,
+        "endLine": 102,
+        "endChar": 28
       },
       "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
