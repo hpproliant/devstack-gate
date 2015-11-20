@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ac7a964_f2ddd315",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006800
+      },
+      "writtenOn": "2015-11-20T06:16:25Z",
+      "side": 1,
+      "message": "Then how does these values get replaced during stack creation in CI environment?",
+      "range": {
+        "startLine": 3,
+        "startChar": 43,
+        "endLine": 3,
+        "endChar": 46
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac7a964_d2c1b72f",
+        "filename": "devstack/local.conf.sample",
+        "patchSetId": 7
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1006800
+      },
+      "writtenOn": "2015-11-20T06:16:25Z",
+      "side": 1,
+      "message": "Will this create the ironic node while bringing up teh stack? If yes then it fits for CI environment, but for our testing/development purpose how does this help?",
+      "range": {
+        "startLine": 99,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 17
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac7a964_529f6752",
+        "filename": "devstack/settings",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006800
+      },
+      "writtenOn": "2015-11-20T06:16:25Z",
+      "side": 1,
+      "message": "Is this tested part? As i understand we give the statement \"enable_service\" here to enable the plugin as a new service in openstack. Atleast ironic-inspector does the same thing for raising it as two different services there.",
+      "range": {
+        "startLine": 1,
+        "startChar": 15,
+        "endLine": 1,
+        "endChar": 32
+      },
+      "revId": "0e70f913bb66242f8745423d37dade4250d0b41a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
