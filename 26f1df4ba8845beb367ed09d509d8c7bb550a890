@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "5ac4a560_95dcc476",
+        "filename": "gate.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 1006798
+      },
+      "writtenOn": "2015-11-22T08:45:00Z",
+      "side": 1,
+      "message": "same \u0027sed\u0027 command is used twice",
+      "range": {
+        "startLine": 164,
+        "startChar": 8,
+        "endLine": 164,
+        "endChar": 145
+      },
+      "revId": "26f1df4ba8845beb367ed09d509d8c7bb550a890",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ac7a964_c5c56f5c",
         "filename": "gate.sh",
         "patchSetId": 5
