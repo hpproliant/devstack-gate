@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac4a560_d8c3d136",
+        "filename": "gate.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 1006803
+      },
+      "writtenOn": "2015-11-23T07:32:58Z",
+      "side": 1,
+      "message": "Would we need ironic-inspector-client as well?",
+      "range": {
+        "startLine": 240,
+        "startChar": 0,
+        "endLine": 240,
+        "endChar": 63
+      },
+      "revId": "28d42230d4d8f50f6663290cd831109acc1b0e80",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac4a560_f8c08d2c",
+        "filename": "gate.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 1006803
+      },
+      "writtenOn": "2015-11-23T07:32:58Z",
+      "side": 1,
+      "message": "can we add proliantutils here?",
+      "range": {
+        "startLine": 246,
+        "startChar": 4,
+        "endLine": 246,
+        "endChar": 8
+      },
+      "revId": "28d42230d4d8f50f6663290cd831109acc1b0e80",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
