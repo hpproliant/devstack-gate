@@ -49,6 +49,8 @@ IRONIC_WHOLE_DISK_USER_IMAGE=$(trueorfalse False IRONIC_WHOLE_DISK_USER_IMAGE)
 #   <ip-address of ilo> <mac address> <ilo username> <ilo password> <size of root disk>
 IRONIC_ILO_HWINFO=${IRONIC_ILO_HWINFO-}
 
+IRONIC_ILO_NETWORK=${IRONIC_ILO_NETWORK:-}
+
 # Returns 0 if whole disk image, 1 otherwise.
 function is_whole_disk_image_required {
     is_deployed_by_agent || [[ "$IRONIC_WHOLE_DISK_USER_IMAGE" == "True" ]] && return 0
@@ -241,6 +243,12 @@ function flush_and_reassign_ovs_interface {
     fi
 }
 
+function add_ilo_network_gateway {
+    if [ -n "$IRONIC_ILO_NETWORK" ] && is_provider_network; then
+        sudo ip route add $IRONIC_ILO_NETWORK via $NETWORK_GATEWAY dev $OVS_PHYSICAL_BRIDGE
+    fi
+}
+
 # We use the same agent ramdisk for all 3 drivers.  But devstack lib/ironic
 # creates a new ramdisk with different names ir-deploy-pxe_ilo.*,
 # ir-deploy-iscsi_ilo.* and ir-deploy-agent_ilo.*. There is no need
@@ -290,6 +298,7 @@ if [[ "$1" == "stack" && "$2" == "extra" ]]; then
 
     # NOTE(rameshg87): Some hacks required.
     flush_and_reassign_ovs_interface
+    add_ilo_network_gateway
 fi
 
 
