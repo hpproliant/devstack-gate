@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac4a560_cdaea4e7",
+        "filename": "gate.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1006800
+      },
+      "writtenOn": "2015-11-25T05:11:55Z",
+      "side": 1,
+      "message": "How BOOT_LOADER has two values?",
+      "range": {
+        "startLine": 28,
+        "startChar": 7,
+        "endLine": 28,
+        "endChar": 18
+      },
+      "revId": "9b011e357d7fb830b0a89394a11f7a7d8b74abff",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac4a560_6da030f5",
+        "filename": "gate.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1006800
+      },
+      "writtenOn": "2015-11-25T05:11:55Z",
+      "side": 1,
+      "message": "The BOOT_LOADER is exprted as elilo by default. is it passed by local.conf for grub?\nI am just wondering that at a time we will have only boot loader?? I think i am missing something basic here.",
+      "range": {
+        "startLine": 112,
+        "startChar": 12,
+        "endLine": 112,
+        "endChar": 23
+      },
+      "revId": "9b011e357d7fb830b0a89394a11f7a7d8b74abff",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac4a560_2d5f1810",
+        "filename": "gate.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 1006800
+      },
+      "writtenOn": "2015-11-25T05:11:55Z",
+      "side": 1,
+      "message": "Line 163 and 164 is same. intentionally done?",
+      "range": {
+        "startLine": 163,
+        "startChar": 68,
+        "endLine": 163,
+        "endChar": 70
+      },
+      "revId": "9b011e357d7fb830b0a89394a11f7a7d8b74abff",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
