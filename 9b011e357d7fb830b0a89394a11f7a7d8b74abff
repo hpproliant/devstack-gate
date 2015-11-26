@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5ac4a560_ec399dd9",
+        "filename": "gate.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1006196
+      },
+      "writtenOn": "2015-11-26T03:40:16Z",
+      "side": 1,
+      "message": "It is a mistake. Will correct it.",
+      "parentUuid": "5ac4a560_cdaea4e7",
+      "range": {
+        "startLine": 28,
+        "startChar": 7,
+        "endLine": 28,
+        "endChar": 18
+      },
+      "revId": "9b011e357d7fb830b0a89394a11f7a7d8b74abff",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac4a560_6da030f5",
         "filename": "gate.sh",
         "patchSetId": 4
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "5ac4a560_0c37b9e4",
+        "filename": "gate.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1006196
+      },
+      "writtenOn": "2015-11-26T03:40:16Z",
+      "side": 1,
+      "message": "BOOT_LOADER is set as elilo only if it is not set.\n\n  export BOOT_LOADER\u003d${BOOT_LOADER:-elilo}\n\nI think we should change it to grub by default.",
+      "parentUuid": "5ac4a560_6da030f5",
+      "range": {
+        "startLine": 112,
+        "startChar": 12,
+        "endLine": 112,
+        "endChar": 23
+      },
+      "revId": "9b011e357d7fb830b0a89394a11f7a7d8b74abff",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac4a560_2d5f1810",
         "filename": "gate.sh",
         "patchSetId": 4
@@ -59,6 +107,30 @@
       "writtenOn": "2015-11-25T05:11:55Z",
       "side": 1,
       "message": "Line 163 and 164 is same. intentionally done?",
+      "range": {
+        "startLine": 163,
+        "startChar": 68,
+        "endLine": 163,
+        "endChar": 70
+      },
+      "revId": "9b011e357d7fb830b0a89394a11f7a7d8b74abff",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac4a560_2c3475dd",
+        "filename": "gate.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 1006196
+      },
+      "writtenOn": "2015-11-26T03:40:16Z",
+      "side": 1,
+      "message": "Will fix it.",
+      "parentUuid": "5ac4a560_2d5f1810",
       "range": {
         "startLine": 163,
         "startChar": 68,
