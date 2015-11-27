@@ -114,6 +114,7 @@ function run_stack {
         capabilities="$capabilities,secure_boot:true"
         nova flavor-key baremetal set capabilities:secure_boot="true"
     fi
+    ironic node-set-power-state $ironic_node off
     ironic node-update $ironic_node add properties/capabilities="$capabilities"
 
     # Update the root device hint if it was specified for some node.
