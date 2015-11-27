@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac4a560_025e9d45",
+        "filename": "gate.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1006803
+      },
+      "writtenOn": "2015-11-27T10:39:03Z",
+      "side": 1,
+      "message": "Add a comment mentioning the reason for this.",
+      "range": {
+        "startLine": 117,
+        "startChar": 33,
+        "endLine": 117,
+        "endChar": 44
+      },
+      "revId": "63c048c03295bc381406fa39c48d6504de5c4d14",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
