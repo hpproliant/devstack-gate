@@ -152,8 +152,11 @@ function prepare_deploy_image {
     iniset $TEMPEST_CONFIG compute build_timeout 3000
 
     # 551 is baremetal flavor created by Ironic.
-    iniset $TEMPEST_CONFIG compute flavor_ref 551
-    iniset $TEMPEST_CONFIG compute flavor_ref_alt 551
+    # get the flavor created by ironic.
+
+    local FLAVOR_ID=$(nova flavor-list | grep 'baremetal' | awk '{print $2}')
+    iniset $TEMPEST_CONFIG compute flavor_ref $FLAVOR_ID
+    iniset $TEMPEST_CONFIG compute flavor_ref_alt $FLAVOR_ID
 
     iniset $TEMPEST_CONFIG compute ssh_user $IRONIC_USER_IMAGE_PREFERRED_DISTRO
     iniset $TEMPEST_CONFIG compute image_ref $cloud_image_uuid
