@@ -71,6 +71,17 @@ function force_umount_swift {
     fi
 }
 
+function kill_all_leftover_openstack_services {
+    local openstack_ports="8773 8774 8775 35357 5000 9292 9191 9696 8080 6385"
+    for port in $openstack_ports; do
+        local processes
+        pids=$(sudo lsof -i :$port | awk '/LISTEN/{print $2}')
+        for pid in $pids; do
+            stopped=$(sudo kill -9 $pid)
+        done
+    done
+}
+
 function run_stack {
 
     local ironic_node
@@ -89,6 +100,7 @@ function run_stack {
     # Remove leftover glance processes and remove previous data.
     kill_glance_processes
     force_umount_swift
+    kill_all_leftover_openstack_services
     sudo rm -rf /opt/stack/data/*
 
     # Final environment variable list.
