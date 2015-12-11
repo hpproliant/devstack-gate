@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac4a560_25de0812",
+        "filename": "devstack/plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1006778
+      },
+      "writtenOn": "2015-12-11T09:37:00Z",
+      "side": 1,
+      "message": "please change the comment as a Note saying:\nearlier 551 was the hardcoded flavor value created by Ironic. Now that Ironic has changed that to take the dynamically created value as the flavor id for baremetal, it takes the value from ``nova flavor-list``",
+      "range": {
+        "startLine": 155,
+        "startChar": 0,
+        "endLine": 155,
+        "endChar": 4
+      },
+      "revId": "06907b9bb9df47229f484e5ba738c366d935cf0f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
