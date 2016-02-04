@@ -255,15 +255,6 @@ function update_devstack {
 
     cp $DIR/devstack/local.conf.sample ./local.conf
 
-    # Cherry-pick the 3 patches required on top of devstack master
-    # Add support for dib based agent ramdisk in lib/ironic
-    git fetch https://rameshg87@review.openstack.org/openstack-dev/devstack refs/changes/55/239855/4 && git cherry-pick FETCH_HEAD
-
-    # Add support for building ISO for deploy ramdisk
-    git fetch https://rameshg87@review.openstack.org/openstack-dev/devstack refs/changes/18/239918/5 && git cherry-pick FETCH_HEAD
-
-    # [IRONIC] Config variable to configure [glance] section
-    git fetch https://rameshg87@review.openstack.org/openstack-dev/devstack refs/changes/84/244584/1 && git cherry-pick FETCH_HEAD
 }
 
 function update_projects {
@@ -282,6 +273,13 @@ function update_projects {
     done
 }
 
+function update_ironic {                                                                                                                                 |
+    cd /opt/stack/ironic                                                                                                                                 |
+    git fetch ssh://Nisha@review.openstack.org:29418/openstack/ironic refs/changes/79/264579/7 && git cherry-pick FETCH_HEAD                             |
+    git fetch ssh://Nisha@review.openstack.org:29418/openstack/ironic refs/changes/90/264590/5 && git cherry-pick FETCH_HEAD                             |
+    git fetch ssh://Nisha@review.openstack.org:29418/openstack/ironic refs/changes/03/266803/4 && git cherry-pick FETCH_HEAD
+}
+
 evalInstructions=$(python $DIR/parsing_n_executing_jenny_data.py "$JENNY_INPUT")
 eval "$evalInstructions"
 
@@ -291,4 +289,5 @@ export LOGDIR=$WORKSPACE
 
 update_devstack
 update_projects
+update_ironic
 run_stack
