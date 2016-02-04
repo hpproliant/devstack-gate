@@ -282,6 +282,13 @@ function update_projects {
     done
 }
 
+function update_ironic {                                                                                                                                 |
+    cd /opt/stack/ironic                                                                                                                                 |
+    git fetch ssh://Nisha@review.openstack.org:29418/openstack/ironic refs/changes/79/264579/7 && git cherry-pick FETCH_HEAD                             |
+    git fetch ssh://Nisha@review.openstack.org:29418/openstack/ironic refs/changes/90/264590/5 && git cherry-pick FETCH_HEAD                             |
+    git fetch ssh://Nisha@review.openstack.org:29418/openstack/ironic refs/changes/03/266803/4 && git cherry-pick FETCH_HEAD
+}
+
 evalInstructions=$(python $DIR/parsing_n_executing_jenny_data.py "$JENNY_INPUT")
 eval "$evalInstructions"
 
@@ -291,4 +298,5 @@ export LOGDIR=$WORKSPACE
 
 update_devstack
 update_projects
+update_ironic
 run_stack
