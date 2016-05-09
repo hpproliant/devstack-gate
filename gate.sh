@@ -255,6 +255,7 @@ function update_devstack {
 
     cp $DIR/devstack/local.conf.sample ./local.conf
 
+    # TODO: Need to move this cherry-picking job to a function/procedure
     # Cherry-pick the 3 patches required on top of devstack master
     # Add support for dib based agent ramdisk in lib/ironic
     git fetch https://rameshg87@review.openstack.org/openstack-dev/devstack refs/changes/55/239855/4 && git cherry-pick FETCH_HEAD
