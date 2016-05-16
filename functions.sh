@@ -28,7 +28,7 @@ function git_checkout {
     git reset --hard $reset_branch
     if ! git clean -x -f -d -q ; then
         sleep 1
-        git clean -x -f -d -q
+        sudo git clean -x -f -d -q
     fi
 }
 
