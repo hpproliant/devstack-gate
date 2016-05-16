@@ -170,6 +170,10 @@ function prepare_deploy_image {
     iniset $TEMPEST_CONFIG scenario ssh_user $IRONIC_USER_IMAGE_PREFERRED_DISTRO
 
     iniset $TEMPEST_CONFIG validation ssh_timeout 600
+    iniset $TEMPEST_CONFIG validation connect_method fixed
+    iniset $TEMPEST_CONFIG validation network_for_ssh $PHYSICAL_NETWORK
+    iniset $TEMPEST_CONFIG validation image_ssh_user $IRONIC_USER_IMAGE_PREFERRED_DISTRO
+
 
     # NOTE(rameshg87): Disable debug logging in tempest as it throws up the
     # below error:
