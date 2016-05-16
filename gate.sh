@@ -229,6 +229,12 @@ EOF
         fi
     fi
 
+    # The gate fails to find this log file and dumps in archiving
+    # artifacts. This is a workaround to fix the failure while archiving
+    # the artifacts.
+    n_dhcp_log=$(ls -l $LOGDIR/n-dhcp.log | awk  '{print $11}')
+    touch $LOGDIR/$n_dhcp_log
+
     # Run the tempest test.
     cd /opt/stack/tempest
     export OS_TEST_TIMEOUT=3000
