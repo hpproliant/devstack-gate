@@ -22,6 +22,30 @@
       "revId": "2c2cfe3e271042051c2a239fcc4d370e86d36d17",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_9d14504d",
+        "filename": "gate.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 1006800
+      },
+      "writtenOn": "2016-05-18T04:36:11Z",
+      "side": 1,
+      "message": "but in our case it is always existing. Thats why we need this workaround.",
+      "parentUuid": "baa041b7_b632995c",
+      "range": {
+        "startLine": 235,
+        "startChar": 4,
+        "endLine": 235,
+        "endChar": 63
+      },
+      "revId": "2c2cfe3e271042051c2a239fcc4d370e86d36d17",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
