@@ -253,6 +253,9 @@ function update_devstack {
         cd /opt/stack/devstack
     fi
 
+    if [[ $IRONIC_DEPLOY_DRIVER == 'pxe_ilo' ]]; then
+        echo "IRONIC_IPXE_ENABLED=False" >> $DIR/devstack/local.conf.sample
+    fi
     cp $DIR/devstack/local.conf.sample ./local.conf
 
     # TODO: Need to move this cherry-picking job to a function/procedure
