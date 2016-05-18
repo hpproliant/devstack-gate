@@ -22,6 +22,30 @@
       "revId": "3822764e9505e64ae358de2b32fb5375dd391231",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_44e4b0df",
+        "filename": "devstack/plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1006800
+      },
+      "writtenOn": "2016-05-18T18:28:44Z",
+      "side": 1,
+      "message": "hmm makes sense in removing the condition.",
+      "parentUuid": "baa041b7_beaeebe3",
+      "range": {
+        "startLine": 58,
+        "startChar": 24,
+        "endLine": 58,
+        "endChar": 27
+      },
+      "revId": "3822764e9505e64ae358de2b32fb5375dd391231",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
