@@ -55,7 +55,7 @@ IRONIC_ILO_NETWORK=${IRONIC_ILO_NETWORK:-}
 
 # Returns 0 if whole disk image, 1 otherwise.
 function is_whole_disk_image_required {
-    is_deployed_by_agent || [[ "$IRONIC_WHOLE_DISK_USER_IMAGE" == "True" ]] && return 0
+    is_deployed_by_agent && [[ "$IRONIC_WHOLE_DISK_USER_IMAGE" == "True" ]] && return 0
     return 1
 }
 
