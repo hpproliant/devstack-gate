@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "baa041b7_f84eca6d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006803
+      },
+      "writtenOn": "2016-05-18T05:16:32Z",
+      "side": 1,
+      "message": "What is the error seen?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 34
+      },
+      "revId": "2c2cfe3e271042051c2a239fcc4d370e86d36d17",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baa041b7_b632995c",
         "filename": "gate.sh",
         "patchSetId": 1
@@ -37,6 +60,30 @@
       "side": 1,
       "message": "but in our case it is always existing. Thats why we need this workaround.",
       "parentUuid": "baa041b7_b632995c",
+      "range": {
+        "startLine": 235,
+        "startChar": 4,
+        "endLine": 235,
+        "endChar": 63
+      },
+      "revId": "2c2cfe3e271042051c2a239fcc4d370e86d36d17",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_d8530616",
+        "filename": "gate.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 1006803
+      },
+      "writtenOn": "2016-05-18T05:16:32Z",
+      "side": 1,
+      "message": "I did not get the fix. All that is being done here is file being located and touched.\n\nIt would be helpful to elaborate on the issue and fix in commit message.",
+      "parentUuid": "baa041b7_9d14504d",
       "range": {
         "startLine": 235,
         "startChar": 4,
