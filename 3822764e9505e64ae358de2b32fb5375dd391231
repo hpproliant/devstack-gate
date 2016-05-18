@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa041b7_beaeebe3",
+        "filename": "devstack/plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1006803
+      },
+      "writtenOn": "2016-05-18T11:07:54Z",
+      "side": 1,
+      "message": "This condition is || as one can deploy whole disk image with non-agent driver as well.\nThis will prohibit it.\nRather we should remove the check  is_deployed_by_agent() as agent can deploy partition image.",
+      "range": {
+        "startLine": 58,
+        "startChar": 24,
+        "endLine": 58,
+        "endChar": 27
+      },
+      "revId": "3822764e9505e64ae358de2b32fb5375dd391231",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
