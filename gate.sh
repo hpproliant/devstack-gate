@@ -276,6 +276,7 @@ function update_projects {
     projects+="openstack/keystone openstack/python-keystoneclient "
     projects+="openstack/glance openstack/python-glanceclient "
     projects+="openstack/tempest"
+    projects+="openstack/requirements"
 
     for project in $projects; do
         cd /opt/stack

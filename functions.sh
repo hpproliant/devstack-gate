@@ -90,6 +90,28 @@ function git_clone_and_cd {
     cd $short_project
 }
 
+function git_uncheckout_project {
+    local project=$1
+    local short_project=$2
+    if [[ -e $short_project ]]; then
+        echo "Check if any files are in checked out state"
+        git status > status_out
+        grep "git checkout -- <file>..." status_out
+        if [[ $? == 0 ]]; then
+            file_list=`grep "modified" status_out | awk '{print $2}'`
+            for file in $file_list; do
+                git checkout -- $file
+            done
+        else
+            grep "git cherry-pick --abort" status_out
+            if [[ $? == 0 ]]; then
+                git cherry-pick --abort
+            fi
+        fi
+        rm status_out
+    fi
+}
+
 # Set up a project in accordance with the future state proposed by
 # Zuul.
 #
@@ -110,6 +132,7 @@ function setup_project {
 
     echo "Setting up $project @ $branch"
     git_clone_and_cd $project $short_project
+    git_uncheckout_project $project $short_project
 
     git_remote_set_url origin $git_base/$project
 
