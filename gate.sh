@@ -217,7 +217,7 @@ EOF
     ilo_username=$(echo $hardware_info |awk '{print $3}')
     ilo_password=$(echo $hardware_info |awk '{print $4}')
     ssh-keygen -R $ilo_ip
-    ssh-keyscan -H $ilo_ip > ~/.ssh/known_hosts
+    ssh-keyscan -H $ilo_ip >> ~/.ssh/known_hosts
     sshpass -p $ilo_password ssh $ilo_ip -l $ilo_username vsp >& $LOGDIR/console &
 
     # Enable tcpdump for pxe drivers
