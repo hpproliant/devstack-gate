@@ -269,7 +269,8 @@ function update_devstack {
 
 function update_projects {
     local projects
-    projects="openstack/nova openstack/python-novaclient "
+    projects="openstack/requirements "
+    projects+="openstack/nova openstack/python-novaclient "
     projects+="openstack/neutron openstack/python-neutronclient "
     projects+="openstack/swift openstack/python-swiftclient "
     projects+="openstack/ironic openstack/python-ironicclient "

@@ -90,6 +90,22 @@ function git_clone_and_cd {
     cd $short_project
 }
 
+# Removing ironic and requirements projects only.
+# openstack/requirements is always left with "upper-constraints"
+# file in modified state. So if any update to the requirements
+# project is not reflected in the /opt/stack/requirements directory.
+# openstack/ironic may be left in unsane state due to merge conflicts
+# of the patch. This leads to gate failing for subsequent run as the
+# new patch cannot be applied unless the directory /opt/stack/ironic is
+# cleaned up manually.
+function remove_git_repos {
+    local short_project=$1
+    if [[ -e $short_project ]] && [[ $short_project == "ironic" || $short_project == "requirements" ]]; then
+        echo "Removing the repo directory $short_project"
+        sudo rm -rf /opt/stack/$short_project
+    fi
+}
+
 # Set up a project in accordance with the future state proposed by
 # Zuul.
 #
@@ -107,6 +123,8 @@ function setup_project {
     local branch=$2
     local short_project=`basename $project`
     local git_base=${GIT_BASE:-https://git.openstack.org}
+
+    remove_git_repos $short_project
 
     echo "Setting up $project @ $branch"
     git_clone_and_cd $project $short_project
